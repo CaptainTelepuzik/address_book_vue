@@ -1,0 +1,25 @@
+.AddForm__wrapper {
+  background: rgba(42, 37, 37, 0.5);
+  position: absolute;
+}
+.AddForm__close {
+  display: inline-block;
+  color: black;
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.AddForm__block {
+  width: 400px;
+  height: 250px;
+  border: 2px solid gray;
+  background: aliceblue;
+  border-radius: 10px;
+}
+.input {
+  font-size: 16px;
+}
+/*# sourceMappingURL=style.css.map */

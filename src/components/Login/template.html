@@ -1,0 +1,40 @@
+<div class="LoginPage__wrapper full-screen flex flex-center">
+    <div class="LoginPage__form flex flex-center flex-column padding__container-l">
+        <div class="full-size flex flex-center flex-column flex-justify-between" v-if="isLoginType">
+            <h1 class="margin__bottom-l">Address Book</h1>
+            <input type="text" class="input margin__bottom-m full-width"
+                   v-model="loginForm.login"
+                   placeholder="Логин" name="login">
+            <input type="password" class="input margin__bottom-m full-width" id="password"
+                   v-model="loginForm.password"
+                   placeholder="Пароль" name="password">
+            <label><input @click="showPass" type="checkbox" class="password-checkbox"> Показать пароль</label>
+
+            <button @click.prevent="_login" class="button cursor-pointer margin__bottom-xs full-width">Войти</button>
+            <a href="#" class="registration margin__bottom-xs full-width" @click.prevent="_choseType">Регистрация</a>
+        </div>
+        <div class="full-size flex flex-center flex-column flex-justify-between" v-else>
+            <h1 class="margin__bottom-l">Address Book</h1>
+            <h3>Регистрация</h3>
+            <input type="text" class="input margin__bottom-m full-width"
+                   v-model="registrationForm.surname"
+                   placeholder="Фамилия" name="surname">
+            <input type="text" class="input margin__bottom-m full-width"
+                   v-model="registrationForm.name"
+                   placeholder="Имя" name="name">
+            <input type="text" class="input margin__bottom-m full-width"
+                   v-model="registrationForm.login"
+                   placeholder="Логин" name="login">
+            <input type="password" class="input margin__bottom-m full-width"
+                   v-model="registrationForm.password"
+                   placeholder="Пароль" name="password" id="password">
+            <label><input @click="showPass" type="checkbox" class="password-checkbox"> Показать пароль</label>
+            <button  :disabled="!(registrationForm.surname && registrationForm.name && registrationForm.login &&
+            registrationForm.password)"
+                     @click.prevent="_registration" class="button cursor-pointer margin__bottom-xs full-width">
+                Зарегистрироваться
+            </button>
+            <a href="#" class="registration margin__bottom-m full-width" @click.prevent="_choseType">Вход</a>
+        </div>
+    </div>
+</div>

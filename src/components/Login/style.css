@@ -1,0 +1,46 @@
+.LoginPage__form {
+  background: var(--form-background);
+  width: 400px;
+  height: 400px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+.input {
+  background: #e9edfa;
+  height: 30px;
+  border: 2px solid #999;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.registration {
+  background: #9cacfa;
+  height: 30px;
+  border: 2px solid #999;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  padding-top: 4px;
+  text-decoration: none;
+  text-align: center;
+}
+.button:hover {
+  background: rgba(43, 134, 19, 0.91);
+}
+a:hover {
+  background: #808edc;
+}
+.button {
+  background: #15b200;
+  height: 30px;
+  border: 2px solid #999;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+h1 {
+  text-shadow: -1px -1px #FFF, -2px -2px #FFF, -1px 1px #FFF, -2px 2px #FFF, 1px 1px #FFF, 2px 2px #FFF, 1px -1px #FFF, 2px -2px #FFF, -3px -3px 2px #BBB, -3px 3px 2px #BBB, 3px 3px 2px #BBB, 3px -3px 2px #BBB;
+  color: steelblue;
+}
+/*# sourceMappingURL=style.css.map */

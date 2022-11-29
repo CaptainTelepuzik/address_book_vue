@@ -1,0 +1,42 @@
+.ContactSend__wrapper {
+  position: absolute;
+  background: rgba(42, 37, 37, 0.5);
+}
+.ContactSend__window {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 500px;
+  height: 500px;
+  background: #ffffff;
+}
+.ContactSend__close {
+  display: inline-block;
+  color: black;
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.ContactSend__span {
+  font-size: 20px;
+  color: black;
+}
+.ContactSend__form {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.ContactSend__deleted {
+  margin: 2px;
+  background: #c92424;
+}
+span {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+  font-family: cursive;
+  font-style: italic;
+}
+/*# sourceMappingURL=style.css.map */

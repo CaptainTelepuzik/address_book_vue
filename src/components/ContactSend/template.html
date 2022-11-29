@@ -1,0 +1,28 @@
+<div class="ContactSend__wrapper full-screen flex flex-center flex-column">
+    <div  class="ContactSend__window shadow padding__container-m">
+        <div class="flex flex-justify-end">
+            <button class=" ContactSend__close cursor-pointer"
+                                                   @click="CloseForm()" >
+            х
+        </button>
+</div>
+        <span class="flex flex-center">Пользователь Найден</span>
+        <span class=" ContactSend__span flex flex-center" >Фамилия</span>
+        <div class=" ContactSend__form flex flex-center padding__container-s" >{{ data.contact_surname }}</div>
+        <span class=" ContactSend__span flex flex-center" >Имя</span>
+        <div class=" ContactSend__form flex flex-center padding__container-s" >{{ data.contact_name }}</div>
+        <span class=" ContactSend__span flex flex-center" >Номер телефона</span>
+        <div class=" ContactSend__form flex flex-center padding__container-s" >
+            <a href="tel: {{data.telephone}}">{{ data.telephone }} </a></div>
+        <span class=" ContactSend__span flex flex-center" >Email</span>
+        <div class=" ContactSend__form flex flex-center padding__container-s" >
+            <a href="mailto:{{ data.email }}">{{ data.email }}</a></div>
+        <span class="flex flex-center">Удалить контакт</span>
+            <div class="flex flex-center">
+                <button @click="removeContact(data.id)"
+                        class=" ContactSend__close ContactSend__deleted
+                cursor-pointer">
+                X</button></div>
+    </div>
+</div>
+
