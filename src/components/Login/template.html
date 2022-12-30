@@ -19,19 +19,28 @@
             <input type="text" class="input margin__bottom-m full-width"
                    v-model="registrationForm.surname"
                    placeholder="Фамилия" name="surname">
+            <label class="label-error" v-if="!this.UserValidation.surname"
+                   for="surname">Только кириллица, min длина  = 3 , max = 43</label>
             <input type="text" class="input margin__bottom-m full-width"
                    v-model="registrationForm.name"
                    placeholder="Имя" name="name">
+            <label class="label-error" v-if="!this.UserValidation.name"
+                   for="name">Только кириллица, min длина  = 3 , max  = 43</label>
             <input type="text" class="input margin__bottom-m full-width"
                    v-model="registrationForm.login"
                    placeholder="Логин" name="login">
+            <label class="label-error" v-if="!this.UserValidation.login"
+                   for="login">Не должно содержать пробелы,min длина  = 5 , max = 43</label>
             <input type="password" class="input margin__bottom-m full-width"
                    v-model="registrationForm.password"
                    placeholder="Пароль" name="password" id="password">
+            <label class="label-error" v-if="!this.UserValidation.password"
+                   for="password">Не должно содержать пробелы,min длина  = 5 , max  = 43</label>
             <label><input @click="showPass" type="checkbox" class="password-checkbox"> Показать пароль</label>
             <button  :disabled="!(registrationForm.surname && registrationForm.name && registrationForm.login &&
             registrationForm.password)"
-                     @click.prevent="_registration" class="button cursor-pointer margin__bottom-xs full-width">
+                     @click.prevent="_registration() "
+                     class="button cursor-pointer margin__bottom-xs full-width">
                 Зарегистрироваться
             </button>
             <a href="#" class="registration margin__bottom-m full-width" @click.prevent="_choseType">Вход</a>
