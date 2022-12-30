@@ -30,7 +30,7 @@
         <form>
 
             <input type="tel" class="input margin__bottom-s"
-                   v-model="telephone" id="tel"
+                   v-model.trim="telephone" id="tel"
                    placeholder="Введите поиск по телефону" name="telephone">
 
             <svg @click="changeAddFormTelephone()"

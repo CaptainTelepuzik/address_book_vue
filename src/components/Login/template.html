@@ -3,10 +3,10 @@
         <div class="full-size flex flex-center flex-column flex-justify-between" v-if="isLoginType">
             <h1 class="margin__bottom-l">Address Book</h1>
             <input type="text" class="input margin__bottom-m full-width"
-                   v-model="loginForm.login"
+                   v-model.trim="loginForm.login"
                    placeholder="Логин" name="login">
             <input type="password" class="input margin__bottom-m full-width" id="password"
-                   v-model="loginForm.password"
+                   v-model.trim="loginForm.password"
                    placeholder="Пароль" name="password">
             <label><input @click="showPass" type="checkbox" class="password-checkbox"> Показать пароль</label>
 
@@ -17,22 +17,22 @@
             <h1 class="margin__bottom-l">Address Book</h1>
             <h3>Регистрация</h3>
             <input type="text" class="input margin__bottom-m full-width"
-                   v-model="registrationForm.surname"
+                   v-model.trim="registrationForm.surname"
                    placeholder="Фамилия" name="surname">
             <label class="label-error" v-if="!this.UserValidation.surname"
                    for="surname">Только кириллица, min длина  = 3 , max = 43</label>
             <input type="text" class="input margin__bottom-m full-width"
-                   v-model="registrationForm.name"
+                   v-model.trim="registrationForm.name"
                    placeholder="Имя" name="name">
             <label class="label-error" v-if="!this.UserValidation.name"
                    for="name">Только кириллица, min длина  = 3 , max  = 43</label>
             <input type="text" class="input margin__bottom-m full-width"
-                   v-model="registrationForm.login"
+                   v-model.trim="registrationForm.login"
                    placeholder="Логин" name="login">
             <label class="label-error" v-if="!this.UserValidation.login"
                    for="login">Не должно содержать пробелы,min длина  = 5 , max = 43</label>
             <input type="password" class="input margin__bottom-m full-width"
-                   v-model="registrationForm.password"
+                   v-model.trim="registrationForm.password"
                    placeholder="Пароль" name="password" id="password">
             <label class="label-error" v-if="!this.UserValidation.password"
                    for="password">Не должно содержать пробелы,min длина  = 5 , max  = 43</label>

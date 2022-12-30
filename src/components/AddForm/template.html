@@ -9,25 +9,25 @@
         <input
                 type="text"
                 class="input margin__bottom-m full-width"
-                v-model="surname"
+                v-model.trim="surname"
                 placeholder="Фамилия"
                 name="surname">
         <input
                 type="text"
                 class="input margin__bottom-m full-width"
-                v-model="name"
+                v-model.trim="name"
                 placeholder="Имя"
                 name="name">
         <input
                 type="tel"
                 class="input margin__bottom-m full-width"
-                v-model="telephone"
+                v-model.trim="telephone"
                 placeholder="Телефон"
                 name="telephone">
         <input
                 type="email"
                 class="input margin__bottom-m full-width"
-                v-model="email"
+                v-model.trim="email"
                 placeholder="Email"
                 name="email">
         <button class="button cursor-pointer margin__bottom-xs full-width"
