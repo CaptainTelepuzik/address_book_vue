@@ -109,7 +109,7 @@ class ValidationUser {
     }
     static _checkValidationPassword(password) {
         if (this._checkNonSpace(password) &&
-            this._checkLENGTH(password)){
+            this. _checkPasswordLENGTH(password)){
             return !this.isCorrect
         } return this.isCorrect
     }
